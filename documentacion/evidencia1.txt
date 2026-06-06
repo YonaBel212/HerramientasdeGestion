@@ -1,0 +1,13 @@
+REQUERIMIENTOS DEL PROYECTO - BITÁCORA DE ACTIVIDADES
+
+Requerimientos Funcionales:
+1. El sistema debe registrar eventos con fecha y hora
+2. El sistema debe clasificar eventos por tipo (login, retos, puntos, etc.)
+3. El sistema debe mostrar lista cronológica de actividades
+4. El sistema debe persistir los logs localmente
+5. El sistema debe asignar iconos y colores según tipo de evento
+
+Requerimientos No Funcionales:
+1. Tiempo de respuesta menor a 2 segundos
+2. Interfaz intuitiva para el usuario
+3. Almacenamiento eficiente usando Shared Preferences
