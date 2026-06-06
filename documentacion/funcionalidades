@@ -1,0 +1,43 @@
+FUNCIONALIDADES DEL PROYECTO
+Bitácora de Actividades - App Flutter
+
+Funcionalidades Principales:
+
+1. Registro de Eventos
+   - Capturar fecha y hora automática de cada actividad
+   - Almacenar mensaje descriptivo del evento
+   - Guardar detalles adicionales si es necesario
+
+2. Clasificación de Eventos por Tipo:
+   -  Login: Inicios de sesión de usuarios
+   -  Register: Registro de nuevos usuarios
+   -  Reto Completado: Cuando el usuario termina un desafío
+   -  Voz Cambiada: Cambios en configuración de voz
+   -  Navegación: Movimiento entre pantallas
+   -  Puntos Ganados: Acumulación de puntos por logros
+   -  Error: Errores del sistema o validaciones fallidas
+
+3. Visualización de Historial
+   - Mostrar lista cronológica de actividades
+   - Ordenar del más reciente al más antiguo
+   - Identificar rápidamente cada evento con iconos
+
+4. Identificación Visual
+   - Icono único por cada tipo de evento
+   - Color distintivo por categoría:
+     * Verde (login)
+     * Azul (register)
+     * Naranja (retos)
+     * Morado (voz)
+     * Celeste (navegación)
+     * Amarillo (puntos)
+     * Rojo (errores)
+
+5. Persistencia de Datos
+   - Guardar automáticamente al registrar evento
+   - Cargar historial al iniciar la app
+   - Mantener datos entre sesiones
+
+6. Formato de Fecha
+   - Visualización día/mes/año - hora:minuto:segundo
+   - Ejemplo: 05/06/2026 - 14:30:25
