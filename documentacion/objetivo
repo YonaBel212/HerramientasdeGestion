@@ -1,1 +1,19 @@
+OBJETIVOS DEL PROYECTO
+Bitácora de Actividades - App Flutter
 
+Objetivo General:
+Desarrollar una aplicación móvil en Flutter que permita registrar, clasificar y visualizar las actividades de los usuarios (inicios de sesión, retos completados, puntos ganados, etc.) mediante un sistema de logging persistente.
+
+Objetivos Específicos:
+
+1. Implementar un sistema de registro de eventos que almacene fecha, hora, tipo de actividad y descripción.
+
+2. Clasificar los eventos en diferentes categorías: login, registro, retos completados, cambios de voz, navegación, puntos ganados y errores.
+
+3. Persistir los datos localmente en el dispositivo usando Shared Preferences.
+
+4. Mostrar una interfaz visual intuitiva que use iconos y colores diferenciados para cada tipo de evento.
+
+5. Permitir al usuario visualizar el historial completo de sus actividades en orden cronológico.
+
+6. Garantizar un tiempo de respuesta menor a 2 segundos en todas las interacciones.
