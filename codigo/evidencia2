@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+
+class LogScreen extends StatelessWidget {
+  final List<LogEntry> logs;
+  
+  const LogScreen({Key? key, required this.logs}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Bitácora de Actividades')),
+      body: ListView.builder(
+        itemCount: logs.length,
+        itemBuilder: (context, index) {
+          final log = logs[index];
+          return Card(
+            child: ListTile(
+              leading: Text(log.getTypeIcon()),
+              title: Text(log.message),
+              subtitle: Text(log.getFormattedDate()),
+              trailing: Text(log.type.toString().split('.').last),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
