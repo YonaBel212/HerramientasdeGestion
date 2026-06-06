@@ -1,0 +1,38 @@
+import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class LogService {
+  static final LogService _instance = LogService._internal();
+  factory LogService() => _instance;
+  LogService._internal();
+  
+  List<LogEntry> _logs = [];
+  
+  void addLog(LogType type, String message, {Map<String, dynamic>? details}) {
+    final entry = LogEntry(
+      timestamp: DateTime.now(),
+      type: type,
+      message: message,
+      details: details,
+    );
+    _logs.insert(0, entry); // Los más recientes primero
+    _saveLogs(); // Persistir en almacenamiento local
+  }
+  
+  List<LogEntry> getLogs() => _logs;
+  
+  Future<void> _saveLogs() async {
+    final prefs = await SharedPreferences.getInstance();
+    final logsJson = _logs.map((log) => log.toJson()).toList();
+    await prefs.setString('logs', jsonEncode(logsJson));
+  }
+  
+  Future<void> loadLogs() async {
+    final prefs = await SharedPreferences.getInstance();
+    final logsString = prefs.getString('logs');
+    if (logsString != null) {
+      final List<dynamic> logsJson = jsonDecode(logsString);
+      _logs = logsJson.map((json) => LogEntry.fromJson(json)).toList();
+    }
+  }
+}
